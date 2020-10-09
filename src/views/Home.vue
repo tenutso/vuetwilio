@@ -1,18 +1,31 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
-</template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import { ref } from "vue";
+import VideoChat from "@/components/VideoChat.vue";
 export default {
-  name: "Home",
   components: {
-    HelloWorld
+    VideoChat
+  },
+  setup() {
+    /* eslint-disable */
+    const username = ref("");
+    const roomName = ref("");
+    const token = ref("");
+    /* eslint-enable */
   }
 };
 </script>
+<template>
+  <div className="app">
+    <header>
+      <h1>Video Chat with Hooks</h1>
+    </header>
+    <main>
+      <VideoChat />
+    </main>
+    <footer>
+      <p>
+        Devel: Anthony Nijmeh
+      </p>
+    </footer>
+  </div>
+</template>
