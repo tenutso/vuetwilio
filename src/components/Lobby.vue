@@ -7,8 +7,8 @@ export default {
     handleSubmit: Function,
     handleLogout: Function
   },
-  setup(props) {
-    console.log(props);
+  setup() {
+    //console.log(props);
   }
 };
 </script>
@@ -17,13 +17,7 @@ export default {
     <h2>Enter a room</h2>
     <div>
       <label htmlFor="name">Name:</label>
-      <input
-        type="text"
-        id="field"
-        name="username"
-        :value="username"
-        required
-      />
+      <input type="text" id="name" name="username" :value="username" required />
     </div>
 
     <div>
